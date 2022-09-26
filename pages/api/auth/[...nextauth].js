@@ -1,6 +1,8 @@
 import NextAuth from 'next-auth';
 import GithubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
+import TwitchProvider from 'next-auth/providers/twitch';
+
 export default NextAuth({
   // Configure one or more authentication providers
   providers: [
@@ -11,6 +13,10 @@ export default NextAuth({
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    }),
+    TwitchProvider({  
+      clientId: process.env.TWITCH_ID,
+      clientSecret: process.env.TWITCH_CLIENT_SECRET,
     }),
     // ...add more providers here
   ],

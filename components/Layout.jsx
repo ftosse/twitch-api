@@ -1,11 +1,10 @@
 import React from 'react'
 import Main from './Main'
-import SideMenu from './SideMenu'
+//import SideMenu from './SideMenu'
 
 const Layout = () => {
   return (
-    <div className='pt-[60px] flex w-full'>
-        <SideMenu />
+    <div className='pt-0 flex w-full'>
         <Main />
     </div>
   )

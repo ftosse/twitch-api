@@ -2,14 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { Fragment, useState } from 'react';
 import Logo from '../public/assets/logo.png';
-import { Menu, Transition } from '@headlessui/react';
+import { Menu, Transition } from '@headlessui/react';  
 import { BsPerson, BsSearch, BsThreeDotsVertical } from 'react-icons/bs';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { useSession, signIn, signOut } from 'next-auth/react';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
-}
+  }
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -204,7 +204,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-
+      
       {/* Hamburger Menu */}
       <div onClick={handleNav} className='block md:hidden z-10 cursor-pointer'>
         {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}

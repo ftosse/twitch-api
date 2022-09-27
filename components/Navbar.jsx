@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect} from 'react';
 import Logo from '../public/assets/logo.png';
-import { Menu, Transition } from '@headlessui/react';  
+import { Menu, Transition } from '@headlessui/react'; 
+import { modifyGames } from '../api'; 
 import { BsPerson, BsSearch, BsThreeDotsVertical } from 'react-icons/bs';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { useSession, signIn, signOut } from 'next-auth/react';
@@ -13,6 +14,13 @@ function classNames(...classes) {
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [games,setGames] = useState([]);
+
+  useEffect(() => {
+    modifyGames(this).then(response => {
+      setGames(response-data.data)
+    }).catch(error => console.log(error))
+  },[])
 
   const handleNav = () => {
     setNav(!nav);
@@ -109,18 +117,20 @@ const Navbar = () => {
         </div>
       </div>
       {/* Middle */}
-      <div className='hidden md:flex grow-[2] items-center justify-center'>
+      <div className=' md:flex grow-[2] items-center justify-center'>
         <div className='bg-gray-500 text-white flex justify-between items-center max-w-[400px] w-full m-auto p-2 rounded-2xl'>
           <div>
             <input
               type='text'
               className='bg-transparent border-none text-white focus:outline-none'
               placeholder='Search'
+              id='fix'
+              onKeyup={() => modifyGames(this.value())}
             />
           </div>
-          <div>
+          <div  className='justiy-left px-4' >
             <BsSearch />
-          </div>
+         </div>
         </div>
       </div>
       {/* Right Side */}

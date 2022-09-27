@@ -7,11 +7,11 @@ import LiveChannels from './LiveChannels'
 
 const Main = () => {
   return (
-    <div className='absolute left-[64px] xl:center'>
-        <Hero />
+    <div className='absolute left-[20px] xl:center mt-20'>
+        <Hero/>
+        <IconBar />
         <Games />
         <LiveChannels />
-        <IconBar />
         <Categories />
     </div>
   )

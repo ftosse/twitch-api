@@ -4,7 +4,8 @@ import GoogleProvider from 'next-auth/providers/google';
 import TwitchProvider from 'next-auth/providers/twitch';
 
 export default NextAuth({
-  // Configure one or more authentication providers
+  // Configure one or more authentication provider
+  
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_ID,

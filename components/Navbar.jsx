@@ -125,7 +125,7 @@ const Navbar = () => {
               className='bg-transparent border-none text-white focus:outline-none'
               placeholder='Search'
               id='fix'
-              onKeyup={() => modifyGames(this.value())}
+              onKeyUp={() => modifyGames(this.value())}
             />
           </div>
           <div  className='justiy-left px-4' >

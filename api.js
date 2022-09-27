@@ -19,5 +19,17 @@ const getTopGames = async () => {
   //alert(JSON.stringify(token))
 }
 
-export { getAuthorization, getTopGames }
+const initGames = async () => {
+  const token = await getAuthorization();
+  return await api.get('https://api.twitch.tv/helix/search/categories?query=a',{
+    headers: {
+      'Authorization':  `Bearer ${token.data.access_token}`,
+      'Client-Id' : 'aswr2ewgtj03zvhv9zffswp29jf1ro'
+    }
+})
+}
+
+
+
+export { getAuthorization, getTopGames, initGames}
 export default api;

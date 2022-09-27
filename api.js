@@ -21,7 +21,7 @@ const getTopGames = async () => {
 
 const modifyGames = async (input) =>{
   const name = input
-  alert(JSON.stringify(input))
+  //alert(JSON.stringify(input))
   const token = await getAuthorization();
     return await api.get(`https://api.twitch.tv/helix/search/categories?query=${name}`,{
     headers: {

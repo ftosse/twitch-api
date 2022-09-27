@@ -125,7 +125,7 @@ const Navbar = () => {
               className='bg-transparent border-none text-white focus:outline-none'
               placeholder='Search'
               id='fix'
-              onKeyUp={() => modifyGames(this.value())}
+              onKeyUp={() => modifyGames(this)}
             />
           </div>
           <div  className='justiy-left px-4' >
@@ -233,10 +233,10 @@ const Navbar = () => {
             <Link href='/'>Home</Link>
           </li>
           <li onClick={() => setNav(false)} className='p-4 text-3xl font-bold'>
-            <Link href='/#live'>Live Channels</Link>
+            <Link href='/#live'>Top Games</Link>
           </li>
           <li onClick={() => setNav(false)} className='p-4 text-3xl font-bold'>
-            <Link href='/#categories'>Top Categories</Link>
+            <Link href='/#categories'>Games for all</Link>
           </li>
           <li onClick={() => setNav(false)} className='p-4 text-3xl font-bold'>
             <Link href='/account'>account</Link>

@@ -1,4 +1,4 @@
-import api, { initGames} from '../api';
+import api, { initGames} from '../pages/api2';
 import React from 'react';
 import CategoriesItem from './CategoriesItem';
 import { useEffect, useState } from 'react';

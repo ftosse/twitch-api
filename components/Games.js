@@ -1,4 +1,4 @@
-import api, { getTopGames } from '../api';
+import api, { getTopGames } from '../pages/api2';
 import React from 'react';
 import { useEffect, useState } from "react";
 import LiveChannelItem from './LiveChannelItem';

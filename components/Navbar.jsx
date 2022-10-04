@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React, { Fragment, useState, useEffect} from 'react';
 import Logo from '../public/assets/logo.png';
 import { Menu, Transition } from '@headlessui/react'; 
-import { modifyGames } from '../api'; 
+import { modifyGames } from '../pages/api2'; 
 import { BsPerson, BsSearch, BsThreeDotsVertical } from 'react-icons/bs';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { useSession, signIn, signOut } from 'next-auth/react';
